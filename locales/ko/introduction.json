@@ -1,12 +1,18 @@
 {
     "pageTitle": "파괴자 모둠: 새로운 시작 - 소개",
     "contentHeaderAboutGroup": "파괴자 모둠에 대하여",
-    "contentHeaderAboutGroupDescription": "2022년 3월, 첫 모둠으로 배정되었던 배정완/(전멤버)김형석/박시현이 시작, 하는 실험마다 족족 망하여 붙여진 이름.<br>이후 단체톡방은 2022년 6월 27일에 생성되었고, 6월 28일에 박가은이 새 멤버로 들어왔습니다.",
+    "contentHeaderAboutGroupDescription": "2022년 3월, 첫 모둠으로 배정되었던 배정완/(전멤버)김형석/박시현이 시작, 하는 실험마다 족족 망하여 붙여진 이름. 이후 단체톡방은 2022년 6월 27일에 생성되었고, 6월 28일에 박가은이 새 멤버로 들어왔습니다.",
     "contentHeaderMember": "멤버 소개",
     "contentMemberUpdateDate": "※ 2024년 2월 기준",
     "contentMemberNoImage": "이 멤버의 사진은 존재하지 않습니다.",
     "contentMemberBJW": "배정완",
     "contentMemberBJWDesc": "파괴자 모둠의 멤버 배정완입니다.",
     "contentMemberPSHImage": "박시현의 프로필 사진",
-    "contentMemberPSH": "박시현"
+    "contentMemberPSH": "박시현",
+    "contentMemberPKEImage": "박가은의 프로필 사진",
+    "contentMemberPKE": "박가은",
+    "contentMemberPKEDesc": "파괴자 모둠에서 개또라이와 관종 돌+I 를 맡고 있는 박가은입니다.",
+    "contentMemberKDH": "김도현",
+    "contentMemberKDHImage": "김도현의 프로필 사진",
+    "contentMemberKDHDesc": "파괴자 모둠에서 철덕을 맏고있는 김도현 입니다."
 }

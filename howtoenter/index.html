@@ -1,3 +1,163 @@
-<h1>Under development.</h1>
-<p>개발중입니다.</p>
-<a href="/">메인으로.</a>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>파괴자 모둠 - 면접</title>
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="back-video">
+            <video muted autoplay loop>
+                <source src="background.webm" type="video/webm" />
+                <strong>Your browser does not support video</strong>
+            </video>
+        </div>
+        <div class="modal" id="mainModal" tabindex="-1" aria-labelledby="mainModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="mainModalLabel">면접</h1>
+                        <div>
+                            <a href="viewer">감독관은 여기를 눌러 뷰어를 여세요.</a>
+                            <button class="btn-close" type="button" onclick="history.back()" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div id="s-0">
+                            <h1>환영합니다.</h1>
+                            <p>파괴자 모둠의 면접에 오신것을 환영합니다.</p>
+                            <div class="d-flex mt-2 justify-content-end">
+                                <button class="btn btn-primary btn-lg" onclick="pageMover.s0.moveNext()" type="button">다음</button>
+                            </div>
+                        </div>
+                        <div id="s-1" class="d-none">
+                            <h1>인적사항</h1>
+                            <label for="name-input">이름 입력</label>
+                            <input type="text" id="name-input" placeholder="홍길동" class="form-control">
+                            <label for="birth-input">생년월일 입력</label>
+                            <input type="date" value="2010-01-01" class="form-control" id="birth-input">
+                            <label for="org-input">재학중인 학교 / 근무중인 직장 입력</label>
+                            <input type="text" id="org-input" class="form-control" placeholder="???">
+                            <div class="d-flex mt-2 justify-content-between">
+                                <button class="btn btn-danger btn-lg" onclick="pageMover.s1.movePrev()" type="button">이전</button>
+                                <button class="btn btn-primary btn-lg" onclick="pageMover.s1.moveNext()" type="button">다음</button>
+                            </div>
+                        </div>
+                        <div id="s-2" class="d-none">
+                            <h1>파괴자로서의 자질 평가</h1>
+                            <form class="needs-validation" novalidate>
+                                <fieldset>
+                                    <legend>주관식</legend>
+                                    <label for="destroy-today">오늘 파괴한 물건의 개수</label>
+                                    <input type="number" id="destroy-today" placeholder="???" class="form-control" required>
+                                    <div class="invalid-feedback">
+                                        파괴한 물건의 개수를 입력해주세요.
+                                    </div>
+                                    <div class="valid-feedback">
+                                        형식에 맞추어 입력되었습니다.
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>물건을 망가뜨리는 것이 행복한가요?</legend>
+                                    <div id="destroyLoveRadio">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="destroyLoveRadio" id="destroyLoveRadio1" checked>
+                                            <label class="form-check-label" for="destroyLoveRadio1">
+                                                예
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="destroyLoveRadio" id="destroyLoveRadio2">
+                                            <label class="form-check-label" for="destroyLoveRadio2">
+                                                아니요
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>물건을 망가뜨리려는 계획을 항상 세우고 있나요?</legend>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="planDestroyRadio" id="planDestroyRadio1" checked>
+                                        <label class="form-check-label" for="planDestroyRadio1">
+                                            예
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="planDestroyRadio" id="planDestroyRadio2">
+                                        <label class="form-check-label" for="planDestroyRadio2">
+                                            아니요
+                                        </label>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>100 KRW 이상의 물건도 부실수 있나요?</legend>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="canDestroyExpensiveRadio" id="canDestroyExpensiveRadio1" checked>
+                                        <label class="form-check-label" for="canDestroyExpensiveRadio1">
+                                            예
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="canDestroyExpensiveRadio" id="canDestroyExpensiveRadio2">
+                                        <label class="form-check-label" for="canDestroyExpensiveRadio2">
+                                            아니요
+                                        </label>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>물건은 실수로 망가뜨리는 것 인가요?</legend>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="isDestroyByMistakeRadio" id="isDestroyByMistakeRadio1" checked>
+                                        <label class="form-check-label" for="isDestroyByMistakeRadio1">
+                                            예
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="isDestroyByMistakeRadio" id="isDestroyByMistakeRadio2">
+                                        <label class="form-check-label" for="isDestroyByMistakeRadio2">
+                                            아니요
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="isDestroyByMistakeRadio" id="isDestroyByMistakeRadio3">
+                                        <label class="form-check-label" for="isDestroyByMistakeRadio3">
+                                            물건을 망가뜨리지 않는 금손(?) 입니다.
+                                        </label>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>동의해야할 사항들</legend>
+                                    <label for="agreeAtRuleCheck"><i>규칙</i>에 동의하십니까?</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="agreeAtRuleCheck" required>
+                                        <label class="form-check-label" for="agreeAtRuleCheck">
+                                            예, 저는 규칙을 지킬것에 동의합니다.
+                                        </label>
+                                        <div class="invalid-feedback">가입하려면 동의하셔야 합니다.</div>
+                                    </div>
+                                    <label for="useKakaotalkCheck">대화방에 필요한 <i>카카오톡</i>을 사용하십니까?</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="useKakaotalkCheck" required>
+                                        <label class="form-check-label" for="useKakaotalkCheck">
+                                            예, 저는 카카오톡을 사용중이거나 파괴자 모둠 대화를 위해 카카오톡에 가입할 예정입니다.
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            가입하려면 동의하셔야 합니다.
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <div class="d-flex mt-2 justify-content-between">
+                                    <button class="btn btn-danger btn-lg" onclick="pageMover.s2.movePrev()" type="button">이전</button>
+                                    <button class="btn btn-primary btn-lg" type="submit">다음</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
+        <script src="./form-validation.js"></script>
+    </body>
+</html>
